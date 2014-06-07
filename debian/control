@@ -1,0 +1,28 @@
+Source: dahdi-tools
+Section: comm
+Priority: optional
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian VoIP Team <pkg-voip-maintainers@lists.alioth.debian.org>
+# groff, man-db and asciidoc are required for generating documentation
+Build-Depends: debhelper (>= 8), dahdi-source (>= 1:2.3.0), libnewt-dev, bzip2, libusb-dev, 
+ asciidoc, groff, man-db
+Standards-Version: 3.9.2
+Homepage: http://www.asterisk.org/
+Vcs-Svn: svn://svn.debian.org/pkg-voip/dahdi-tools/trunk/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-voip/dahdi-tools/?op=log
+
+Package: dahdi
+Architecture: linux-any
+#Jmdault 20090601: the init scripts needs the kernel drivers, so we require
+#either the dkms module (preferred) or the source pkg (with module-assistant)
+Depends: ${shlibs:Depends}, ${perl:Depends}, ${misc:Depends}, procps, fxload, dahdi-linux, dahdi-niistt, gawk
+Conflicts: zaptel
+Replaces: zaptel
+Description: utilities for using the DAHDI kernel modules
+ DAHDI (formly Zaptel) is an interface for telephony devices used by e.g. 
+ the Asterisk PBX software. The dahdi-* packages provide the kernel 
+ DAHDI kernel modules and their required setup environment.
+ .
+ This package includes userspace utilities required to configure DAHDI 
+ modules.
+

@@ -15,7 +15,7 @@ ifeq ($(strip $(foreach var,clean distclean dist-clean update,$(findstring $(var
 endif
 
 SUBDIRS_UTILS_ALL:= ppp
-SUBDIRS_UTILS := xpp
+#SUBDIRS_UTILS := xpp
 
 OPTFLAGS=-O2
 CFLAGS+=-I. $(OPTFLAGS) -g -fPIC -Wall -DBUILDING_TONEZONE #-DTONEZONE_DRIVER
@@ -90,7 +90,7 @@ CONFIG_FILE:=$(CONFIG_DIR)/system.conf
 UDEVRULES_DIR:=$(sysconfdir)/udev/rules.d
 
 # Utilities we build with a standard build procedure:
-UTILS		= dahdi_tool dahdi_test dahdi_monitor dahdi_speed sethdlc dahdi_cfg \
+UTILS		= dahdi_tool dahdi_test dahdi_monitor sethdlc dahdi_cfg \
 		  fxstest fxotune dahdi_diag dahdi_scan
 
 # some tests:
