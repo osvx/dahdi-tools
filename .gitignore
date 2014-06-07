@@ -48,3 +48,10 @@ xpp/twinstar.8
 xpp/xpp_blink.8
 xpp/xpp_sync.8
 zonedata.lo
+
+/autoconfig.h
+/debian/dahdi.debhelper.log
+/debian/dahdi.substvars
+/debian/dahdi/
+/debian/files
+/debian/tmp/
